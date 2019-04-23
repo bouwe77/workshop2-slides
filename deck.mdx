@@ -13,15 +13,22 @@ import { Image, Appear } from '@mdx-deck/components'
 
 our twitter clone :)
 
+https://bouwe.nl/react
+
 ---
 
 # REACT
 
 - UI components
+
+
 - Library
+
+
 - Open source
-- Functional & 
-declarative programming
+
+
+- Functional & declarative programming
 
 ---
 
@@ -34,8 +41,14 @@ TODO... Afbeelding nitwit app components tonen
 # COMPONENTS
 
 - Plain javascript functions
+
+
 - Always return a piece of UI
+
+
 - Mixing technologies: JSX
+
+
 - Keep them small!
 
 ---
@@ -56,14 +69,16 @@ Multiple components
 
 1. Create your own app:
     - In the browser [CodeSandbox][]
-    - Or locally using *create-react-app*
-1. Create the following component hierarchy:
-    - App
+    - or: locally using **create-react-app**
+
+
+2. Create the following component hierarchy:
+      
+
+- App
     - Header
     - Timeline
-      - Post (1..n)
-
-=> http://bit.ly/nn-react-workshop
+        - Post (1..n)
 
 [Codesandbox]: https://codesandbox.io
 
@@ -79,14 +94,13 @@ PIZZA!!!
 
 1. Create your own app:
     - In the browser [CodeSandbox][]
-    - Or locally using *create-react-app*
+    - or: locally using *create-react-app*
 1. Create the following component hierarchy:
-    - App
-    - Header
-    - Timeline
-      - Post (1..n)
-
-=> http://bit.ly/nn-react-workshop
+      
+- App
+  - Header
+  - Timeline
+    - Post (1..n)
 
 [Codesandbox]: https://codesandbox.io
 
@@ -101,8 +115,14 @@ browser extension
 # PROPS
 
 - Passing data between components
+
+
 - Props are read-only
+
+
 - One way data binding
+
+
 - Stateless presentational components
 
 ---
@@ -117,15 +137,20 @@ Props
 
 1. In the **App** component, define an **array of post objects**.
 
-1. Each post object contains a **username and content**
 
-1. Pass the array of post objects as props from **App** to **Timeline**
+2. Each post object contains a **username and content**
 
-1. In the **Timeline** component, render a **Post** component for each post in the posts array using the array.map() function
 
-1. Pass each post object as props to the **Post** component
+3. Pass the array of post objects as props from **App** to **Timeline**
 
-1. In **Post**, display the user and content of the post object from props
+
+4. In the **Timeline** component, render a **Post** component for each post in the posts array using the array.map() function
+
+
+5. Pass each post object as props to the **Post** component
+
+
+6. In **Post**, display the user and content of the post object from props
 
 ---
 
@@ -153,9 +178,11 @@ Pass state as props to a child component
 
 1. Add a constructor to the App component with an empty initial state object
 
-1. Move the array of post objects we created earlier to the initial state
 
-1. Pass the array from state as props to Timeline
+2. Move the array of post objects we created earlier to the initial state
+
+
+3. Pass the array from state as props to Timeline
 
 ---
 
@@ -163,7 +190,9 @@ Pass state as props to a child component
 
 - State change causes a re-render of the stateful component and all its children
 
+
 - State is local and private within component
+
 
 - Implement events to change state:
     - User
@@ -203,11 +232,13 @@ Array of objects
 
 # ASSIGNMENT
 
-1. Create an addPost(content) function in the *App* component
+1. Create an addPost(content) function in the **App** component
 
-1. Implement the addPost with a setState that adds a new post object with the supplied content
 
-1. For testing purposes, add a dummy button with an onClick to call the addPost function:
+2. Implement the addPost with a setState that adds a new post object with the supplied content
+
+
+3. For testing purposes, add a dummy button with an onClick to call the addPost function:
 
 ```jsx
 <button onClick={() => this.addPost("hoi")}>Dummy</button>
@@ -229,6 +260,7 @@ Misschien goed om hier nogmaals de one way data binding via events en het declar
 
 - Uncontrolled inputs
 
+
 - Controlled inputs
 
 ---
@@ -237,7 +269,9 @@ Misschien goed om hier nogmaals de one way data binding via events en het declar
 
 - Forms
 
+
 - Uncontrolled inputs
+
 
 - Controlled inputs
 
@@ -253,11 +287,14 @@ What to choose: uncontrolled or controlled?
 
 1. Create the **Compose** class component:
 
-1. Create a form with a textarea for the post content
 
-1. Sync textarea with state via onChange event handler
+2. Create a form with a textarea for the post content
 
-1. Add an onSubmit event handler that logs the content from state with a console.log or alert
+
+3. Sync textarea with state via onChange event handler
+
+
+4. Add an onSubmit event handler that logs the content from state with a console.log or alert
 
 ---
 
@@ -277,16 +314,22 @@ callbacks
 
 # ASSIGNMENT
 
-App component:
+**App** component:
 
 1. Pass the addPost function as props to **Compose**
-1. Remove the dummy button
-1. Clear initial state
 
-Compose component:
+
+2. Remove the dummy button
+
+
+3. Clear initial state
+
+**Compose** component:
 
 1. Submit handler calls the addPost from props
-1. Clear the textarea value after submitting
+
+
+2. Clear the textarea value after submitting
 
 ---
 
@@ -302,6 +345,7 @@ However, it’s all local state… :(
 
 - You’ll need an http library
 
+
 - Keeping state in sync with api
 
 ---
@@ -309,6 +353,7 @@ However, it’s all local state… :(
 # EXAMPLE
 
 - API calls
+
 
 - Sync state
 
@@ -338,10 +383,17 @@ Save post:
 Create components that allow for following or unfollowing other users…
 
 Possible solution:
-- Show all users
-- Indicate per user whether or not you are following him/her
-- Add toggle button per user
-- Toggling the button calls API to follow or unfollow the user
+
+1. Show all users
+
+
+2. Indicate per user whether or not you are following him/her
+
+
+3. Add toggle button per user
+
+
+4. Toggling the button calls API to follow or unfollow the user
 
 ---
 
