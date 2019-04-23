@@ -1,0 +1,376 @@
+export { default as theme } from './theme'
+import { Image, Appear } from '@mdx-deck/components'
+
+# &lt;Welcome /&gt;
+
+---
+
+# TO DO TODAY
+
+---
+
+# INTRODUCING...
+
+our twitter clone :)
+
+---
+
+# REACT
+
+- UI components
+- Library
+- Open source
+- Functional & 
+declarative programming
+
+---
+
+# COMPONENTS
+
+TODO... Afbeelding nitwit app components tonen
+
+---
+
+# COMPONENTS
+
+- Plain javascript functions
+- Always return a piece of UI
+- Mixing technologies: JSX
+- Keep them small!
+
+---
+
+# EXAMPLE
+
+Hello World component
+
+---
+
+# EXAMPLE
+
+Multiple components
+
+---
+
+# ASSIGNMENT
+
+1. Create your own app:
+    - In the browser [CodeSandbox][]
+    - Or locally using *create-react-app*
+1. Create the following component hierarchy:
+    - App
+    - Header
+    - Timeline
+      - Post (1..n)
+
+=> http://bit.ly/nn-react-workshop
+
+[Codesandbox]: https://codesandbox.io
+
+---
+
+# EFFE WACHTE...
+
+PIZZA!!!
+
+---
+
+# ASSIGNMENT
+
+1. Create your own app:
+    - In the browser [CodeSandbox][]
+    - Or locally using *create-react-app*
+1. Create the following component hierarchy:
+    - App
+    - Header
+    - Timeline
+      - Post (1..n)
+
+=> http://bit.ly/nn-react-workshop
+
+[Codesandbox]: https://codesandbox.io
+
+---
+
+# REACT DEV TOOLS
+
+browser extension
+
+---
+
+# PROPS
+
+- Passing data between components
+- Props are read-only
+- One way data binding
+- Stateless presentational components
+
+---
+
+# EXAMPLE
+
+Props
+
+---
+
+# ASSIGNMENT
+
+1. In the **App** component, define an **array of post objects**.
+
+1. Each post object contains a **username and content**
+
+1. Pass the array of post objects as props from **App** to **Timeline**
+
+1. In the **Timeline** component, render a **Post** component for each post in the posts array using the array.map() function
+
+1. Pass each post object as props to the **Post** component
+
+1. In **Post**, display the user and content of the post object from props
+
+---
+
+# STATE
+
+Dynamic data of a component
+
+Hooks
+
+...
+...
+...
+
+---
+
+# EXAMPLE
+
+Set initial state ...bla...
+
+Pass state as props to a child component
+
+---
+
+# ASSIGNMENT
+
+1. Add a constructor to the App component with an empty initial state object
+
+1. Move the array of post objects we created earlier to the initial state
+
+1. Pass the array from state as props to Timeline
+
+---
+
+# CHANGE STATE
+
+- State change causes a re-render of the stateful component and all its children
+
+- State is local and private within component
+
+- Implement events to change state:
+    - User
+    - Network
+    - Time
+
+---
+
+# CHANGE STATE
+
+animatie...
+
+---
+
+# CHANGE STATE
+
+this.setState
+
+Supply what to change the state in, not how
+
+Only supply that part of the state you want to change
+
+setState replaces and merges the supplied part into the state
+
+React may apply state changes in batches to prevent too many unnecessary re-renders
+
+---
+
+# EXAMPLE
+
+this.setState()
+Single value
+
+Array of objects
+
+---
+
+# ASSIGNMENT
+
+1. Create an addPost(content) function in the *App* component
+
+1. Implement the addPost with a setState that adds a new post object with the supplied content
+
+1. For testing purposes, add a dummy button with an onClick to call the addPost function:
+
+```jsx
+<button onClick={() => this.addPost("hoi")}>Dummy</button>
+```
+
+---
+
+# TUSSENSLIDE: HOEVER ZIJN WE NU?
+
+Plaatje dat aangeeft dat de App component klaar is om posts toe te voegen
+En dat de Timeline en Post klaar zijn om posts te tonen
+Nu gaan we de boel aan elkaar knopen d.m.v. een form
+
+Misschien goed om hier nogmaals de one way data binding via events en het declaratieve karakter van React te benadrukken, met als doel dat mijn uitleg over controlled vs uncontrolled duidelijker wordt. En dat het “logisch” is dat je controlled inputs wilt. -> animatie nogmaals laten zien?
+
+---
+
+# FORMS
+
+- Uncontrolled inputs
+
+- Controlled inputs
+
+---
+
+# EXAMPLE
+
+- Forms
+
+- Uncontrolled inputs
+
+- Controlled inputs
+
+---
+
+# FORMS
+
+What to choose: uncontrolled or controlled?
+
+---
+
+# ASSIGNMENT
+
+1. Create the **Compose** class component:
+
+1. Create a form with a textarea for the post content
+
+1. Sync textarea with state via onChange event handler
+
+1. Add an onSubmit event handler that logs the content from state with a console.log or alert
+
+---
+
+# CHANGE STATE FROM CHILD COMPONENTS
+
+By using callbacks
+
+animatie...
+
+---
+
+# EXAMPLE
+
+callbacks
+
+---
+
+# ASSIGNMENT
+
+App component:
+
+1. Pass the addPost function as props to **Compose**
+1. Remove the dummy button
+1. Clear initial state
+
+Compose component:
+
+1. Submit handler calls the addPost from props
+1. Clear the textarea value after submitting
+
+---
+
+# HURRAY!!!
+
+Our timeline functionality is DONE!
+
+However, it’s all local state… :(
+
+---
+
+# APIS AND STATE
+
+- You’ll need an http library
+
+- Keeping state in sync with api
+
+---
+
+# EXAMPLE
+
+- API calls
+
+- Sync state
+
+---
+
+# NITWIT API
+
+https://nitwit-api.azurewebsites.net
+
+---
+
+# ASSIGNMENT
+
+Retrieve timeline:
+
+1. GET /users/:userId/timeline in the Container’s componentDidMount()
+
+Save post:
+
+1. POST /users/:userId/posts
+{ “post”: “Hello World” }
+
+---
+
+# ASSIGNMENT
+
+Create components that allow for following or unfollowing other users…
+
+Possible solution:
+- Show all users
+- Indicate per user whether or not you are following him/her
+- Add toggle button per user
+- Toggling the button calls API to follow or unfollow the user
+
+---
+
+# RECAP / QUIZ
+
+<ul>
+  <Appear>
+    <li>Components</li>
+    <li>JSX</li>
+    <li>Props</li>
+    <li>State</li>
+    <li>Hooks</li>
+    <li>Events</li>
+  </Appear>
+</ul>
+
+---
+
+# WHAT'S NEXT?
+
+- Type safety:
+prop-types, typescript, etc.
+
+- Patterns:
+...
+
+- ...
+...
+
+---
+
+# &lt;Thanks /&gt;
