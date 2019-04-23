@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@mdx-deck/basic-template",
+  "name": "workshop2-slides",
   "version": "2.3.2",
   "scripts": {
     "start": "mdx-deck deck.mdx",
@@ -9,5 +9,7 @@
   },
   "devDependencies": {
     "mdx-deck": "^2.3.2"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
