@@ -121,7 +121,7 @@ browser extension
   <li>From parent to child<br/><br/></li>
   <Appear>
     <li>Parent passes one or more values to child<br/><br/></li>
-    <li>Child receives one props object<br/><br/></li>
+    <li>Child receives all values as one props object<br/><br/></li>
   </Appear>
 </ul>
 
@@ -170,7 +170,7 @@ const posts = [
 <li>Makes your components dynamic<br/><br/></li>
   <Appear>
     <li>Multiple components can have their own part of state<br/><br/></li>
-    <li>Where to place each part of state?<br/><br/></li>
+    <li>Which component has which part of the state?<br/><br/></li>
     <li>Initialize state with React's <b>useState</b> hook<br/><br/></li>
   </Appear>
 </ul>
@@ -189,9 +189,9 @@ const posts = [
 # EXERCISE
 
 <ol>
-  <li>Initialize the posts array by calling useState<br/><br/></li>
+  <li>Initialize a new posts array by calling useState<br/><br/></li>
 
-  <li>Pass the hard-coded posts array as initial state to useState<br/><br/></li>
+  <li>Pass the hard-coded posts array we made earlier <br/>as initial state to useState<br/> <i>(note we'll get rid of this initial state soon)</i><br/><br/></li>
 
   <li>Need a hint...?</li>
 </ol>
@@ -273,6 +273,12 @@ Changing state with the set function
 ```jsx
 <button onClick={() => addPost("Hello World")}>Dummy</button>
 ```
+
+---
+
+# Tussenslide
+
+ja hiero
 
 ---
 
@@ -374,9 +380,21 @@ https://nitwit-api.azurewebsites.net
 
 ---
 
+# GOOD JOB!!!
+
+<MyConfetti />
+
+You finished the workshop!
+
+However, do we have time for the BONUS exercise?
+
+
+---
+
+
 # BONUS EXERCISE
 
-Create components that allow for following or unfollowing other users...
+Create components that allow for <br/>**following and unfollowing** other users...
 
 Possible solution:
 
