@@ -13,28 +13,34 @@ import MyConfetti from "./components/MyConfetti"
 
 # INTRODUCING...
 
-our twitter clone <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">nitwit</a> :)
+my twitter clone <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">nitwit</a> :)
 
 ---
 
 # REACT
 
-- UI components
-
-
-- Library
-
-
-- Open source
-
-
-- Functional & declarative programming
+<ul>
+  <li>UI components<br/><br/></li>
+  <Appear>
+    <li>Library<br/><br/></li>
+    <li>Open source<br/><br/></li>
+    <li>Functional & declarative programming</li>
+  </Appear>
+</ul>
 
 ---
 
 # COMPONENTS
 
-TODO... Afbeelding nitwit app components tonen
+<ul>
+  <li>Pieces of UI (small!)<br/><br/></li>
+  <Appear>
+    <li>Example: <a href="https://twitter.com" target="_blank">twitter</a><br/><br/></li>
+    <li>Parent-child relationship<br/><br/></li>
+    <li>Reuse<br/><br/></li>
+    <li>Single responsibility</li>
+  </Appear>
+</ul>
 
 ---
 
@@ -45,7 +51,7 @@ TODO... Afbeelding nitwit app components tonen
   <Appear>
     <li>Always render (return) a piece of UI<br/><br/></li>
     <li>Mixing technologies: JSX<br/><br/></li>
-    <li>Keep them small!</li>
+    <li>Keep them small and simple!</li>
   </Appear>
 </ul>
 
@@ -168,6 +174,7 @@ const posts = [
 
 <ul>
 <li>Makes your components dynamic<br/><br/></li>
+<li>Data to display, also when it changes<br/><br/></li>
   <Appear>
     <li>Multiple components can have their own part of state<br/><br/></li>
     <li>Which component has which part of the state?<br/><br/></li>
@@ -226,7 +233,7 @@ const posts = [
 
 ---
 
-# PROPS vs STATE
+# PROPS & STATE
 
 - Props is data **between** components
 
@@ -263,7 +270,7 @@ Changing state with the set function
 <ol>
 <li>Add an addPost(content) function to the <u>App</u> component.<br/><br/></li>
 
-<li>Create a post object containing the provided content<br/>and a hard-coded username.<br/><br/></li>
+<li>Create a post object containing the provided content<br/>and your first name as hard-coded username.<br/><br/></li>
 
 <li>Call <b>setPosts</b> and provide an array containing<br/> both the new post object and the current posts.<br/><br/></li>
 
@@ -276,18 +283,31 @@ Changing state with the set function
 
 ---
 
-# Tussenslide
+# OK...
 
-ja hiero
+What do we have now?
 
 ---
 
 # FORMS
 
 <ul>
-  <li><b>Uncontrolled</b> inputs: the old skool way<br/><br/></li>
+  <li>
+    <b>Uncontrolled</b> inputs
+    <ul>
+      <li>The "Old Skool way"</li>
+      <li>Easier</li>
+    </ul>
+    <br/><br/>
+  </li>
   <Appear>
-    <li><b>Controlled</b> inputs: the React way</li>
+    <li>
+      <b>Controlled</b> inputs:
+      <ul>
+        <li>The "React way": events and state</li>
+        <li>Better UX: interdependent fields, validation, local storage, etc.</li>
+      </ul>
+    </li>
   </Appear>
 </ul>
 
@@ -354,6 +374,9 @@ However, it’s all local state… :(
 
 - Keeping state in sync with api
 
+
+- This is a side effect: useEffect hook
+
 ---
 
 # EXAMPLE
@@ -362,6 +385,9 @@ However, it’s all local state… :(
 
 
 - Sync state
+
+
+- useEffect hook
 
 ---
 
@@ -374,8 +400,9 @@ https://nitwit-api.azurewebsites.net
 # EXERCISE
 
 <ol>
-  <li>Retrieve timeline:<br/> HTTP GET on /users/:userId/timeline <br/>via the useEffect hook<br/><br/></li>
-  <li>Save post:<br/> HTTP POST on /users/:userId/posts <br/>in the addPost function</li>
+  <li>Retrieve timeline:<br/> HTTP GET on /users/<u>:userId</u>/timeline <br/>via the useEffect hook<br/><br/></li>
+  <li>Save post:<br/> HTTP POST on /users/<u>:userId</u>/posts <br/>in the addPost function<br/><br/></li>
+  <li>Note: the <u>:userId</u> is your <b>first name</b></li>
 </ol>
 
 ---
@@ -386,7 +413,7 @@ https://nitwit-api.azurewebsites.net
 
 You finished the workshop!
 
-However, do we have time for the BONUS exercise?
+But maybe we have time for the BONUS exercise?
 
 
 ---
@@ -405,6 +432,8 @@ Possible solution:
 3. Add toggle button per user
 
 4. Toggling the button calls API to follow or unfollow the user
+
+5. Check the API documentation: https://nitwit-api.azurewebsites.net
 
 ---
 
@@ -426,13 +455,23 @@ Possible solution:
 # WHAT'S NEXT?
 
 - Type safety:
-  prop-types and/or TypeScript
 
-- Patterns:
-  ...
+  _prop-types and/or TypeScript_
 
-- Libraries:
-  Formik, React router, ...
+
+- Libraries/technologies:
+
+  _Formik, React router, GraphQL, etc._
+
+
+- Patterns to prevent "prop drilling":
+
+  _props.children, useContext, etc._
+
+
+- People:
+
+  _Dan Abramov, Kent C. Dodds, Ryan Florence_
 
 ---
 
